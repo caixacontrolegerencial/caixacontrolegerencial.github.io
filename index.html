@@ -31,7 +31,9 @@ img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
 .btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:800;font-size:18px;padding:17px 30px;border-radius:12px;box-shadow:0 6px 18px rgba(16,176,120,.28);transition:transform .15s,background .15s}
-.btn:hover{background:var(--green-d);transform:translateY(-1px)}
+.btn:hover{background:var(--green-d)}
+a:focus-visible,summary:focus-visible{outline:3px solid #F2B441;outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .micro{font-size:14px;color:var(--lblue);margin-top:14px}
 .micro.dark{color:var(--muted)}
 header.top{background:var(--navy);color:#fff}
@@ -53,12 +55,13 @@ section.alt{background:var(--bg)}
 h2{font-size:clamp(26px,3.6vw,38px);line-height:1.15;font-weight:800;letter-spacing:-.6px;color:var(--navy);max-width:780px}
 h2 em{font-style:normal;color:var(--green-d)}
 .sub{color:var(--muted);font-size:18px;margin-top:14px;max-width:720px}
-.pain{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-.pain div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.pain{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:34px}
+.pain div{border-left:4px solid var(--navy);padding:2px 0 2px 18px}
 .pain b{display:block;font-size:17px;color:var(--navy);margin-bottom:6px}
 .pain span{color:var(--muted);font-size:15.5px}
 .feat{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
-.feat div{background:#fff;border-radius:14px;padding:24px;border-top:5px solid var(--green);box-shadow:0 1px 0 var(--line)}
+.feat{column-gap:48px;row-gap:0}
+.feat div{padding:20px 0;border-top:1px solid var(--line)}
 .feat h3{font-size:18px;color:var(--navy);margin-bottom:6px}
 .feat p{color:var(--muted);font-size:15.5px}
 .row{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:center;margin-top:56px}
@@ -129,15 +132,15 @@ footer p{margin-bottom:8px;max-width:820px}
     <p class="lead">Planilha de Excel, sem macros, para MEIs e pequenos negócios: caixa, contas a receber e a pagar, resultado do mês, projeção de 60 dias e um DASHBOARD com tudo em uma tela.</p>
     <div class="cta">
       <a class="btn" href="https://pay.kiwify.com.br/ghC8ekZ">Quero a planilha por R$ 67</a>
-      <p class="micro">Pagamento único • Garantia de 7 dias • Acesso pela área de membros</p>
+      <p class="micro">Pagamento único, garantia de 7 dias e acesso pela área de membros.</p>
     </div>
-    <div class="shot"><img src="dashboard.jpg" alt="DASHBOARD da planilha Caixa Controle Gerencial com indicadores e gráficos" width="1232" height="961"><p class="tag">DASHBOARD da planilha • dados fictícios</p></div>
+    <div class="shot"><img src="dashboard.jpg" alt="DASHBOARD da planilha Caixa Controle Gerencial com indicadores e gráficos" width="1232" height="961"><p class="tag">Aba DASHBOARD da planilha, com dados fictícios.</p></div>
   </div>
 </section>
 
 <section class="alt">
   <div class="wrap">
-    <h2>Dinheiro na conta <em>não é dinheiro livre.</em></h2>
+    <h2>Dinheiro na conta não é dinheiro livre.</h2>
     <p class="sub">Com entradas, saídas e compromissos espalhados entre extrato, caderno e WhatsApp, três perguntas ficam sem resposta:</p>
     <div class="pain">
       <div><b>Quanto posso retirar?</b><span>O saldo do banco não mostra os fornecedores e as despesas que vencem antes da próxima entrada.</span></div>
@@ -149,7 +152,7 @@ footer p{margin-bottom:8px;max-width:820px}
 
 <section>
   <div class="wrap">
-    <h2>O que a planilha <em>faz por você</em></h2>
+    <h2>O que a planilha faz</h2>
     <div class="feat">
       <div><h3>DASHBOARD</h3><p>Receita, resultado e margem do mês, caixa, saldo projetado, ponto de equilíbrio, a receber e a pagar, 5 gráficos e alertas de conferência.</p></div>
       <div><h3>Contas a receber e a pagar</h3><p>Baixa automática pelo ID do título, inclusive pagamento parcial. Você vê o que entrou e o saldo que continua em aberto.</p></div>
@@ -235,15 +238,16 @@ footer p{margin-bottom:8px;max-width:820px}
 
 <section class="alt final">
   <div class="wrap">
-    <h2>R$ 67, uma vez. <em>E 7 dias para testar.</em></h2>
+    <h2>R$ 67, uma vez. E 7 dias para testar.</h2>
     <a class="btn" href="https://pay.kiwify.com.br/ghC8ekZ">Quero a planilha por R$ 67</a>
-    <p class="micro dark">Pagamento único • Garantia de 7 dias</p>
+    <p class="micro dark">Pagamento único e garantia de 7 dias.</p>
   </div>
 </section>
 
 <footer><div class="wrap">
-  <p><b>Caixa Controle Gerencial</b> • Planilha gerencial de caixa. Não substitui contabilidade nem orientação fiscal. As imagens desta página usam dados fictícios.</p>
+  <p><b>Caixa Controle Gerencial</b>. Planilha gerencial de caixa. Não substitui contabilidade nem orientação fiscal. As imagens desta página usam dados fictícios.</p>
   <p>Excel e Microsoft 365 são marcas da Microsoft. Este produto não é afiliado nem endossado pela Microsoft.</p>
+  <p>Esta página usa o Pixel da Meta para medir visitas e o resultado dos anúncios. Ele registra dados de navegação, como a página visitada, e não coleta nome, e-mail ou dados de pagamento aqui. Saiba como a Meta trata esses dados na <a href="https://www.facebook.com/privacy/policy/">Política de Privacidade da Meta</a>.</p>
   <p>Instagram: <a href="https://www.instagram.com/caixacontrolegerencial/">@caixacontrolegerencial</a></p>
 </div></footer>
 </body>
